@@ -1,6 +1,6 @@
 # Most-Flink-Driven
 🧵 SpindleGuard: Real-Time IoT Thread Break Detection
-Winner Category: Most Flink-Driven App
+
 
 SpindleGuard is a real-time "nervous system" for textile factories. In traditional manufacturing, a thread break on a spinning spindle might go unnoticed for over an hour, leading to catastrophic material waste and machine downtime.
 
@@ -29,9 +29,9 @@ Processing Engine: Apache Flink SQL
 Libraries: confluent-kafka, python-dotenv
 
 🧠 The Flink Intelligence (CEP)
-To win the prize for "Most Flink-Driven," we implemented advanced pattern matching using MATCH_RECOGNIZE. This allows the system to distinguish between normal machine vibration and a true thread break.
+I implemented advanced pattern matching using MATCH_RECOGNIZE. This allows the system to distinguish between normal machine vibration and a true thread break.
 
-SQL
+``SQL
 -- The logic that catches the "Normal -> Broken" transition
 SELECT *
 FROM spindle_sensors
@@ -47,7 +47,7 @@ MATCH_RECOGNIZE (
     DEFINE
         A AS A.status = 'RUNNING',
         B AS B.status = 'BROKEN' AND B.weight_grams = 0
-);
+);``
 Visualizing the real-time data flow from IoT edge simulation to cloud-native stream processing.
 ![alt text](image-1.png)
 
