@@ -62,6 +62,8 @@ Bash
 git clone https://github.com/YOUR_USERNAME/spindleguard
 cd spindleguard
 pip install -r requirements.txt
+
+
 3. Configuration
 Create a .env file based on the .env.example provided:
 
@@ -69,6 +71,8 @@ Plaintext
 BOOTSTRAP_SERVER=pkc-xxxx.us-east1.gcp.confluent.cloud:9092
 API_KEY=YOUR_KEY
 API_SECRET=YOUR_SECRET
+
+
 4. Run the Simulation
 Bash
 python3 script.py
